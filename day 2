@@ -1,1 +1,16 @@
+Reading the inputs and outputs
+•	Printf(“format string”,variable);
+•	Int a=88;
+•	Printf(“%d”,a);
+•	Scanf(“format specifier”,&variable);
+•	Int a ( int = whole numbers )( int stores 2,4 bytes)
+•	Integer also decides range for variable, how much memory.
+•	Range of c lang = -32768 to 32767 ->32 bit
+•	-2147483648 to 2147483648 ->64 bit
+•	Signed int and unsigned int
+•	Signed int -> it supports positive and negative values
+ unsigned int-> supports positive values (range is 0 to 65535).
+•	Program : addition of 2 numbers.
+-> input, output,logic
+-> 
 
