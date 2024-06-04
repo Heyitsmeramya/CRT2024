@@ -1,4 +1,5 @@
 ascii number printing
+character to number
 #include <stdio.h>
 
 int main()
@@ -6,5 +7,15 @@ int main()
     char a;
     scanf("%c",&a);
     printf("%d",a);
+    return 0;
+}
+number to character program
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    printf("%c",a);
     return 0;
 }
