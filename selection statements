@@ -173,3 +173,71 @@ int main()
 if condition internally having another if condition is called nested if.
 program:
 biggest of three numbers?
+#include <stdio.h>
+#include<math.h>
+int main()
+{
+    int a,b,c;
+    scanf("%d%d%d",&a,&b,&c);
+    if(a>b)
+    {
+        if(a>c)
+        {
+            printf("%d",a);
+        }
+        else
+        {
+            printf("%d",c);
+        }
+    }
+    else if(b>c)
+    {
+        printf("%d",b);
+    }
+    else
+    printf("%d",c);
+}
+-> zero only false in c remaining all are taking as true.
+switch statement
+syntax:
+switch(expression)-> expression can only valid integer and character.
+{
+case constant1;
+    statements;
+break;
+case constant2;
+    statements;
+break;
+....
+....
+case constantn;
+    statements;
+fallthrough statements-> execute all prints statements.
+-> default can write anywhere in program.
+program:read two numbers and print 1 for addition,2 for subtraction,3 for multiplication,& 4 for division
+#include <stdio.h>
+#include<math.h>
+int main()
+{
+    int a,b;
+    scanf("%d%d",&a,&b);
+    int ch;
+    scanf("%d",&ch);
+    switch(ch)
+    {
+    case 1: 
+        printf("%d",a+b);
+    break;
+    case 2:
+        printf("%d",a-b);
+    case 3:
+        printf("%d",a*b);
+    break;
+    case 4: 
+        printf("%d",a/b);
+    break;
+    default:
+        printf("invalid choice");
+    break;
+    }
+}
