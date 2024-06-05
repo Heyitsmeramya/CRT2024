@@ -1,0 +1,175 @@
+if ex:read two numbers and divide two numbers
+program:
+#include <stdio.h>
+int main()
+{
+    int a,b;
+    scanf("%d%d",&a,&b);
+    if(b==0)
+    {
+        printf("second cannot be zero");
+        b=1;
+    }
+int r=a/b;
+printf("\n%d",r);
+    return 0;
+}
+
+if else :
+syntax:
+if(condition)
+{
+\\statements
+}
+else
+{
+\\statement
+}
+ex1:read a number and print number is even or odd
+program:
+#include<stdio.h>
+int a;
+scanf("%d",&a);
+if(a%2==0)
+    {
+        printf("the number is even");
+    }
+    else
+    {
+        printf("the number is odd");
+    }
+    return 0;
+}
+ex2:
+read a year and print year is leap year(divide by 4)
+program://century year
+#include <stdio.h> 
+int main()
+{
+int a;
+    scanf("%d",&a);
+    if((a%4==0)&&(a%100!=0))
+    {
+        printf("leap year");
+    }
+    else
+    {
+        printf("not a leap year");
+    }
+    return 0;
+}
+#include <stdio.h>//not century year
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    if((a%4==0)&&(a%100!=0)||(a%400==0))
+    {
+        printf("leap year");
+    }
+    else
+    {
+        printf("not a leap year");
+    }
+    return 0;
+}
+
+
+EX3:read a character and print character is vowel or consonant
+program:
+#include <stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+#include <stdio.h>
+int main()
+{
+    char a;
+    scanf("%c",&a);
+    if(a=='a'|| a=='e' || a=='i'|| a=='o'||a=='u'||a=='A' || a=='I' || a=='E' ||a=='O' || a=='U')
+    {
+        printf("vowel");
+    }
+    else
+    printf("consonant");
+    return 0;
+}
+
+find the roots of quadratic equation
+#include <stdio.h>
+#include<math.h>
+int main()
+{
+    float a,b,c;
+    scanf("%f%f%f",&a,&b,&c);
+    float d=b*b-4*a*c;
+    if(d<0)
+    {
+        printf("roots are not possible");
+    }
+    else
+    {
+        printf("roots are imaginary");
+        float r1=(-b+sqrt(b*b-4*a*c))/(2*a);
+        float r2=(-b-sqrt(b*b-4*a*c))/(2*a);
+        printf("root1=%f\n",r1);
+        printf("root2=%f\n",r2);
+    }
+}
+
+->if else if statement
+if(condition1)
+{
+statements;
+}
+elseif(condition2)
+{
+statements;
+}
+else
+{
+statements;
+}
+
+smallest of three numbers
+#include <stdio.h>
+#include<math.h>
+int main()
+{
+    int a,b,c;
+    scanf("%d%d%d",&a,&b,&c);
+    if(a<b && a<c)
+    {
+        printf("%d",a);
+    }
+    else if(b<c,b<a)
+    {
+        printf("%d",b);
+    }
+    else
+    printf("%d",c);
+}
+
+Read a number and print number is +ve no or -ve no or zero
+#include <stdio.h>
+#include<math.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    if(a>0)
+    {
+        printf("%d is positive",a);
+    }
+    else if (a<0)
+    {
+        printf("%d is negative",a);
+    }
+    else
+    printf("%d is zero",a);
+}
+-> nested if
+if condition internally having another if condition is called nested if.
+program:
+biggest of three numbers?
