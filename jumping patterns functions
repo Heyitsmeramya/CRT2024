@@ -1,0 +1,374 @@
+jumping statements
+break:
+->it breaks the loop based on specified condition.
+#include<stdio.h>
+int main()
+{
+int i;
+for(i=1;i<=n;i++)
+{
+pf("%d\n",i);
+if(i=5)
+break;
+}
+}
+
+-> prime number or not 
+#include<stdio.h>
+int main()
+{
+    int n,c=0,i;
+    scanf("%d",&n);
+    for(int i=2;i<n;i++)
+    {
+        if(n%i==0)
+        {
+            c=1;
+            break;
+        }
+    }
+    if(c==0 && n!=1)
+        printf("prime no");
+    else
+        printf("not a prime number");
+return 0;
+}
+
+pgm: print elements until -1
+#include<stdio.h>
+int main()
+{
+    int a,i;
+    while(1)
+    {
+        scanf("%d",&a);
+        if(a==-1)
+            break;
+    }
+return 0;
+
+continue: 
+-> it continues the loop and skips remaining part of the loop.
+
+patterns
+#include<stdio.h>
+int main()
+{
+    int i,j;
+    for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=5;j++)
+        {
+            printf("%d ",j);
+        }
+        printf("\n");
+    }
+}
+1 2 3 4 5 
+1 2 3 4 5
+.
+.
+1 2 3 4 5
+
+#include<stdio.h>
+int main()
+{
+    int i,j;
+    for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=5;j++)
+        {
+            printf("%d ",i);
+        }
+        printf("\n");
+    }
+}
+print *
+#include<stdio.h>
+int main()
+{
+    int i,j;
+    for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=5;j++)
+        {
+            printf("*",j);
+        }
+        printf("\n");
+    }
+}
+
+#include<stdio.h>
+int main()
+{
+    int i,j;
+    for(i=1;i<=5;i++)//rows
+    {
+        for(j=1;j<=i;j++)//coloumns
+        {
+            printf("%d",j);
+        }
+        printf("\n");
+    }
+}
+#include<stdio.h>
+int main()
+{
+    int i,j;
+    for(i=1;i<=5;i++)//rows
+    {
+        for(j=1;j<=i;j++)//coloumns
+        {
+            printf("%d",j);
+        }
+        printf("\n");
+    }
+}
+#include<stdio.h>
+int main()
+{
+    int i,j;
+    for(i=1;i<=5;i++)//rows
+    {
+        for(j=1;j<=i;j++)//coloumns
+        {
+            printf("%d",j);
+        }
+        printf("\n");
+    }
+}
+#include<stdio.h>
+int main()
+{
+    int i,j;
+    for(i=1;i<=5;i++)//rows
+    {
+        for(j=1;j<=i;j++)//coloumns
+        {
+            printf("%d",j);
+        }
+        printf("\n");
+    }
+}
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+
+#include<stdio.h>
+int main()
+{
+    int i,j;
+    for(i=1;i<=5;i++)//rows
+    {
+        for(j=1;j<=i;j++)//coloumns
+        {
+            printf("%c ",96+j);
+        }
+        printf("\n");
+    }
+}
+a
+a b
+a b c
+a b c d
+a b c d e
+
+#include<stdio.h>
+int main()
+{
+    int i,j;
+    for(i=5;i>=1;i--)//rows
+    {
+        for(j=1;j<=i;j++)//coloumns
+        {
+            printf("%d ",j);
+        }
+        printf("\n");
+    }
+}
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+
+#include<stdio.h>
+int main()
+{
+    int i,j;
+    for(i=5;i>=1;i--)//rows
+    {
+        for(j=5;j>=i;j--)//coloumns
+        {
+            printf("%d ",j);
+        }
+        printf("\n");
+    }
+}
+5 
+5 4 
+5 4 3
+5 4 3 2
+5 4 3 2 1
+
+#include<stdio.h>
+int main()
+{
+    int i,j,k;
+    for(i=1;i<=5;i++)//rows
+    {
+        for(k=i;k<=4;k++)
+            printf(" ");
+        for(j=1;j<=i;j++)//coloumns
+        {
+            printf("%d",j);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+#include<stdio.h>
+int main()
+{
+    int i,j,k;
+    for(i=1;i<=5;i++)//rows
+    {
+        for(k=i;k<=4;k++)
+            printf(" ");
+        for(j=1;j<=i;j++)//coloumns
+        {
+            printf("%d",j);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+       1
+     2 1 
+   3 2 1
+  4 3 2 1
+5 4 3 2 1
+#include<stdio.h>
+int main()
+{
+    int i,j,k;
+    for(i=1;i<=5;i++)//rows
+    {
+        for(k=i;k<=4;k++)
+            printf(" ");
+        for(j=1;j<=i;j++)//coloumns
+        {
+            printf("* ",j);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+    *
+   * *
+  * * *
+ * * * * 
+* * * * *
+
+#include<stdio.h>
+int main()
+{
+    int n,m,c=0,i,j;
+    scanf("%d%d",&m,&n);
+    for(i=m;i<n;i++)
+    {
+        c=0;
+        for(j=1;j<=i;j++)
+        {
+            if(i%j==0)
+            c++;
+        }
+        if(c==2)
+        printf("%d ",i);
+    }
+return 0;
+}
+output:m=10
+n=100
+prime numbers 10 to 100
+
+
+functions: 
+function is a self contaied block to execute some operation.
+advantages:
+reusability: once we can write function as per our requirement use any number of times.
+easy to debug: divide the program into parts thats why easy to trace out the error.
+syntax:
+returntype functionname(parameters/arguments)
+{
+-------
+---------
+---------
+}
+
+#include<stdio.h>
+int main()
+{
+  int n=printf("satish");
+  printf("\n%d",n);
+}
+o/p: satish
+6
+-> function name :should follow somerules which are variable rules.
+#include<stdio.h>
+void show()
+{
+  printf("python\n");
+}
+void line()
+{
+  printf("------\n");
+}
+int main()
+{
+  line();
+  show();
+  line();
+}
+o/p:
+--------
+show
+--------
+
+parameters :
+these are used to pass inputs to the function.
+these are optional.
+
+-> addition of two numbers.
+#include<stdio.h>
+void add(int x,int y)// formal
+{
+    int r=x+y;
+    printf("%d",r);
+}
+int main()//actual
+{
+    int a,b;
+    scanf("%d%d",&a,&b);
+    add(a,b);
+return 0;
+}
+
+return statements:
+this is used to exit a function and return to main area where it was called.
+#include<stdio.h>
+int add(int x,int y)// formal
+{
+    int r=x+y;
+    return r;
+}
+int main()//actual
+{
+    int a,b;
+    scanf("%d%d",&a,&b);
+    int k=add(a,b);
+    printf("%d",k);
+}
+
