@@ -1,0 +1,251 @@
+function categories:
+1. no arguments and no return values.
+2. no arguments with return value.
+3. with arguments but no return value
+4.with arguments and return value.(uses mostly)
+
+
+-> no arguments and no return values.
+in this method,there is no data communication between calling function and called function.
+area of rectangle : l*b;
+#include <stdio.h>
+void area()
+{
+    int l,b;
+    scanf("%d%d",&l,&b);
+    int r=l*b;
+    printf("%d",r);
+}
+
+int main()
+    {
+        area();
+        return 0;
+    }
+program : biggest of 3 numbers.
+#include <stdio.h>
+void biggest()
+{
+    int a,b,c;
+    scanf("%d%d%d",&a,&b,&c);
+    if(a>b && a>c)
+    {
+        printf("%d",a);
+    }
+    else if(b>c)
+    {
+        printf("%d",b);
+    }
+    else 
+    printf("%d",c);
+}
+
+int main()
+    {
+       biggest();
+        return 0;
+    }
+
+program using loop : reverse number.
+#include <stdio.h>
+void reverse()
+{
+    int n,d,r=0;
+    scanf("%d",&n);
+    while(n>0)
+    {
+        d=n%10;
+        n=n/10;
+        r=r*10+d;
+    }
+    printf("%d",r);
+}
+
+int main()
+    {
+       reverse();
+        return 0;
+    }
+
+2. no arguments with return value.
+In this method, cannot pass any values from calling function to called function but it returns a value.
+input and logic in function, output in main function.
+#include <stdio.h>
+int area()
+{
+    int l,b;
+    scanf("%d%d",&l,&b);
+    int r=l*b;
+    return r;
+}
+
+int main()
+    {
+       int k=area();
+       printf("%d",k);
+    }
+program : biggest of 3 numbers
+#include <stdio.h>
+int biggest()
+{
+    int a,b,c;
+    scanf("%d%d%d",&a,&b,&c);
+    if(a>b && a>c)
+    {
+        return a;
+    }
+    else if(b>c)
+    {
+        return b;
+    }
+    else 
+    return c;
+}
+
+int main()
+    {
+       int k=biggest();
+       printf("%d",k);
+    }
+
+program: reverse of 3 digits
+#include <stdio.h>
+int reverse()
+{
+    int n,d,r=0;
+    scanf("%d",&n);
+    while(n>0)
+    {
+        d=n%10;
+        n=n/10;
+        r=r*10+d;
+    }
+    return r;
+}
+
+int main()
+    {
+       int k=reverse();
+        printf("%d",k);
+    }
+3. with argument but no return value:
+-> in this method pass values from calling function to called function but it cannot return any value.
+input in main area , o/p,logic in function.
+#include<stdio.h>
+void area(int l,int b)
+{
+    int r=l*b;
+    printf("%d",r);
+}
+int main()
+{
+    int l,b;
+    scanf("%d%d",&l,&b);
+    area(l,b);
+}
+program biggest of 3 numbers
+#include <stdio.h>
+void biggest(int a,int b,int c)
+{
+    if(a>b && a>c)
+    {
+        printf("%d",a);
+    }
+    else if(b>c)
+    {
+        printf("%d",b);
+    }
+    else 
+    printf("%d",c);
+}
+
+int main()
+    {
+      int a,b,c;
+    scanf("%d%d%d",&a,&b,&c);
+    biggest(a,b,c);
+    }
+program: reverse 
+#include <stdio.h>
+void reverse(int n)
+{
+    int d,r=0;
+    while(n>0)
+    {
+        d=n%10;
+        n=n/10;
+        r=r*10+d;
+    }
+    printf("%d",r);
+}
+
+int main()
+    {
+        int n;
+        scanf("%d",&n);
+        reverse(n);
+    }
+ 4. with arguments and return value.(uses mostly)
+in the method, pass values from calling function to called function and it returns a value.
+input and output in main area logic in function.
+#include <stdio.h>
+int area(int l,int b)
+{
+    int r=l*b;
+    return r;
+}
+int main()
+{
+    int l,b;
+    scanf("%d%d",&l,&b);
+    int k=area(l,b);
+    printf("%d",k);
+}
+biggest
+#include <stdio.h>
+int biggest(int a,int b,int c)
+{
+    if(a>b && a>c)
+    {
+        return a;
+    }
+    else if(b>c)
+    {
+        return b;
+    }
+    else 
+    return c;
+}
+
+int main()
+    {
+        int a,b,c;
+        scanf("%d%d%d",&a,&b,&c);
+        int k= biggest(a,b,c);
+        printf("%d",k);
+    }
+
+reverse of 3 numbers
+#include <stdio.h>
+int reverse(int n)
+{
+    int d,r=0;
+    while(n>0)
+    {
+        d=n%10;
+        n=n/10;
+        r=r*10+d;
+    }
+    return r;
+}
+
+int main()
+    {
+        int n;
+        scanf("%d",&n);
+        int k=reverse(n);
+        printf("%d",k);
+    }
+
+
+
