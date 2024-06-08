@@ -1,0 +1,144 @@
+recursion: a function called by itself is called recursion.
+#include <stdio.h>
+int main()
+{
+    printf("vignan\n");
+    main();
+}
+syntax: 
+void fun()
+{
+  --------
+  --------
+  fun();
+}
+we have 2 types of recursion 
+1.finite 
+2. infinite
+-> depends on process there are two types of recursions
+  . finite : stop at particular instruction.
+  . infinite : keep on executing never stops.
+-> by default every recursion is infinite.
+ex;
+void m1()
+{
+  printf("Good morning");
+  m1();
+}
+int main()
+{
+  m1();
+}
+-> this is finite recursion,this process never stops.
+1.finite recursion:
+->a unction which is called bhy itself,and terminates at a finite number of steps is called finite recursion.
+we can make this infinate recursion into finite recursion by one special condition"BASE FUNCTION".
+BASE CONDITION: it is a special condition,we have to create inside recursive calls so that our recursion should terminate at a finate steps.
+#include<stdio.h>
+void mq(int c)
+{
+  if(c<=0)
+    {
+      printf("good morning\n")
+      c++;
+      m1(c);
+    }
+}
+int main()
+{
+  int c=1;
+  m1(c);
+}
+
+why we need recursion?
+some times,if we have a problem,we need to divide that big prblm into small small sub problems and the solution for those problems,which interanlly
+  calculate solution for that given prblm
+  ex:
+binary search
+quick,merge sort
+factorial,
+prime number.
+->properties of recursion
+1. same operations with multiple inputs.
+2. we will divide the entire problem into small problems.
+3. base condn is very very important in the recursion,else it leads to infinate.
+itertion vs reccursion
+->recursion:
+. terminates when base condn is true
+. functional concept
+. extra space is required
+. smaller code
+-> iteration:
+. terminates when condn is false.
+. looping concept.
+. extra space is not requird
+. bigger code.
+typs of recursion.
+1. direct recursion and indirect recursion
+1.direct recursion -> divide into 4 types
+1. tail recursion 
+2. head recursion
+3. tree recursion.
+4. nested  recursion.
+TAIL RECURSION:
+-> if a recursive functn calling itself and that recursive call is the last statement in the function then it is known as tail recursion. 
+  after call the recursive functn performs ntng.the function has to process or perform any operation at the time of calling it does ntng at returning time.
+
+eg : print numbers from n to 1
+#include<stdio.h>
+void fun(int n)
+{
+  if(n>=1)
+    {
+      printf("%d ",n);
+      fun(n-1);
+    }
+}
+int main()
+{
+  int n;
+  pf("enter n value");
+  sf("%d",&n);
+  fun(n);
+}
+HEAD RECURSION: 
+if a recursive function calling itself and that recursive call is the first statement in the function then its known as Head recursion.
+  the function doesnot have to proccess or perform any operation at the time of calling and all operations are done at running time.
+  ex:
+  print  numbers 1 to n
+void fun(int n)
+{
+  if(n>=1)
+    {
+      fun(n-1)
+      pf("%d",n);
+    }
+}
+int main()
+{
+  int n;
+  pf("enter n value");
+  sf("%d",&n);
+  fun(n);
+}
+
+tree recursion:
+if a recursive functionn calling itself for 1 time then it is known as linear recursion.if a recursive function calling itself for more than one time 
+then it is known as tree recursion.
+  #include<stdio.h>
+  void fun(int n)
+{
+  if(n>=1)
+    {
+      printf("%d",n);
+      fun(n-1);
+      fun(n-1);
+    }
+}
+int main()
+{
+  int n;
+  pf("enter n value");
+  sf("%d",&n);
+  fun(n);
+}
