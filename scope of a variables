@@ -1,0 +1,64 @@
+scope of a variables
+local variables:
+-> if any variable declared with in the function that is called local variable. these variables are accessed within the function only.
+#include <stdio.h>
+void show()
+{
+    int a=10;
+    printf("show a=%d\n",a);
+}
+void display()
+{
+   int a=20;
+   printf("display a=%d",a);
+}
+int main()
+{
+    show();
+    display();
+}
+
+global variables:
+any variable declared outside of the function that is called global variable.these variables are accessed anywhere in the program.
+#include <stdio.h>
+int a=100;
+void show()
+{
+    printf("show a=%d\n",a);
+}
+void display()
+{
+   printf("display a=%d",a);
+}
+int main()
+{
+    show();
+    display();
+}
+functions are 2 types
+1. library functions
+2. user defined.
+user defined libraries in c language
+to create header file for arithmetic operations.
+-> to save the file with arth.c
+#include <stdio.h>
+int add (int x,int y);
+{
+    return x+y;
+}
+int sub (int x,int y);
+{
+    return x-y;
+}
+int mul (int x,int y);
+{
+    return x*y;
+}
+int div (int x,int y);
+{
+    return x/y;
+}
+-> to use header files
+user defined call we have to use " " only.
+like #include<stdio.h> -> #include"stdio.h>
+#include<arth.c>-> #include"arth.c"
