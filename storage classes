@@ -1,0 +1,89 @@
+storage classes
+memory where is create cpu register or ram.
+tYPES OF STORAGE CLASSES
+1. automatic variables
+2.external variables
+3. static
+4. register
+-> AUTOMATIC VARIABLES:these variables defined inside a fun in which they are utilized. 
+they are created the fun is called and destroyed automatically when the function is exited.
+these are also refered as local variables or internal variables.
+A variable declared inside the function withut storage class specification is,by default,an automatic variable.
+these are stord in stack memory.
+eg:
+#include <stdio.h>
+int main()
+{
+    auto int a=1;
+    {
+        auto int a=2;
+        {
+            auto int a=3;
+            printf("%d ",a);  
+        }
+        printf("%d ",a);
+    }
+    printf("%d ",a);
+    return 0;
+}
+EXTERNAL VARIABLES:these variables are both alive and active through out the entire program.these are also known as global values.
+these variables are declared outside a function.
+these are stored in memory.
+external variable default value is zero.
+syntax:
+extern datatype variable;
+extern int a;
+#include <stdio.h>
+int a=1;
+void increment()
+{
+    printf("%d ",a);
+    a++;
+}
+int main()
+{
+    printf("%d ",a);
+    increment();
+    increment();
+}
+STATIC VARIABLES:
+the value of static variables persists until the end of the program.
+the static variable may be either internal or external depending on the place of the declaration.
+the default value of static variable is zero.
+static variables are stored in static memory.
+syntax:
+static datatype variable;
+static int i;
+#include <stdio.h>
+void increment()
+{
+    static int a=1;
+    printf("%d ",a);
+    a++;
+}
+int main()
+{
+    increment();
+    increment();
+    increment();
+}
+o/p:1 2 3
+REGISTER VARIABLES:
+it is a special kind of variables which stores in cpu registrs.
+the basic advantage of register variable is faster than normal variables.
+In iplementation,whenn we are accessing a variable through the pgm number of times then go for register variable.
+#include <stdio.h>
+void increment()
+{
+   register int i;
+   for(i=1;i<=10;i++)
+   {
+       printf("%d ",i);
+   }
+}
+int main()
+{
+    increment();
+    increment();
+    increment();
+}
